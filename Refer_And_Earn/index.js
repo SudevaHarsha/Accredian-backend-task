@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+
 const referralRoutes = require('./routes/referralRoutes');
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 
 // API Routes
